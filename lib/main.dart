@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design/pages/home_page.dart';
-import 'package:flutter_design/utils/anime_ui_colors.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_design/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,9 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Designs',
-      theme: ThemeData.light().copyWith(
-          scaffoldBackgroundColor: AnimeUiColors.background,
-          textTheme: GoogleFonts.sourceSansProTextTheme()),
+      theme: ThemeData.light(),
       home: HomePage(),
     );
   }

@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_design/models/anime.dart';
-import 'package:flutter_design/models/nav_bar.dart';
-import 'package:flutter_design/utils/anime_ui_colors.dart';
-import 'package:flutter_design/widgets/sliver_header_delegate.dart';
+import 'package:flutter_design/anime/models/anime.dart';
+import 'package:flutter_design/anime/models/nav_bar.dart';
+import 'package:flutter_design/anime/utils/anime_ui_colors.dart';
+import 'package:flutter_design/anime/widgets/sliver_header_delegate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HomePage extends StatelessWidget {
+class AnimeHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +69,6 @@ class NavBar extends StatelessWidget {
                               color: (index == value) ? AnimeUiColors.cyan : Colors.white
                             )
                           )
-                           
                         ]
                       ),
                     ),
