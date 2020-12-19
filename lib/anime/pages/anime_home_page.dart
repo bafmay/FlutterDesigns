@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_design/anime/models/anime.dart';
 import 'package:flutter_design/anime/models/nav_bar.dart';
 import 'package:flutter_design/anime/utils/anime_ui_colors.dart';
-import 'package:flutter_design/anime/widgets/sliver_header_delegate.dart';
+import 'package:flutter_design/widgets/sliver_header_delegate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AnimeHomePage extends StatelessWidget {

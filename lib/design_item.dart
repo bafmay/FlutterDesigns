@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design/anime/anime_page.dart';
+import 'package:flutter_design/linkedin/linkedin_page.dart';
 
 class DesignItem {
   final String option;
@@ -9,15 +10,11 @@ class DesignItem {
 
 var optionsData = [
   DesignItem(
-    option: 'Anime App',
+    option: 'Anime Design',
     destWidget: AnimePage()
   ),
    DesignItem(
-    option: 'Anime App',
-    destWidget: AnimePage()
-  ),
-   DesignItem(
-    option: 'Anime App',
-    destWidget: AnimePage()
+    option: 'Linkedin Design',
+    destWidget: LinkedInPage()
   )
 ];
