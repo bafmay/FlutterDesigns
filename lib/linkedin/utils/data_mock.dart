@@ -10,11 +10,11 @@ const itemsNavBar = [
   'assets/linkedin/icons/bell.svg',
 ];
 
-const newPostItems = [
-  NewPost(name: 'Image', path: 'assets/icons/image.svg'),
-  NewPost(name: 'Video', path: 'assets/icons/film.svg'),
-  NewPost(name: 'File', path: 'assets/icons/file.svg'),
-  NewPost(name: 'Article', path: 'assets/icons/article.svg')
+final newPostItems = <NewPost>[
+  NewPost(name: 'Image', path: 'assets/linkedin/icons/image.svg'),
+  NewPost(name: 'Video', path: 'assets/linkedin/icons/film.svg'),
+  NewPost(name: 'File', path: 'assets/linkedin/icons/file.svg'),
+  NewPost(name: 'Article', path: 'assets/linkedin/icons/article.svg')
 ];
 
 final posts = [

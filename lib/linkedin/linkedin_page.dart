@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_design/linkedin/pages/linkedin_home_page.dart';
+import 'package:flutter_design/linkedin/pages/home/linkedin_home_page.dart';
 import 'package:flutter_design/linkedin/providers/menu_options.dart';
 import 'package:flutter_design/linkedin/utils/linkedin_colors.dart';
 import 'package:google_fonts/google_fonts.dart';

@@ -1,25 +1,9 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_design/linkedin/providers/menu_options.dart';
 import 'package:flutter_design/linkedin/utils/data_mock.dart';
 import 'package:flutter_design/linkedin/utils/linkedin_colors.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          NavBar()
-        ],
-      )
-    );
-  }
-}
 
 class NavBar extends StatelessWidget {
   NavBar({Key key}) : super(key: key);
@@ -74,8 +58,8 @@ class NavBar extends StatelessWidget {
                                 children: [
                                   SvgPicture.asset(itemsNavBar[index],width: 25,color: value == index ? LinkedInColors.cyan : Colors.grey),
                                   if(value == index) CircleAvatar(radius: 2.5,backgroundColor: LinkedInColors.cyan)
-                                ],
-                              ),
+                                ]
+                              )
                             ),
                             flex: 1
                           );
