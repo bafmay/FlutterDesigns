@@ -70,6 +70,7 @@ final posts = [
 final user = User(
     name: 'Brian Alvis',
     photo: 'assets/linkedin/images/users/user.png',
+    background: 'assets/linkedin/images/users/background.png',
     location: 'Lima, Peru',
     conections: 990,
     profile: 550,

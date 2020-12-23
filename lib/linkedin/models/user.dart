@@ -6,6 +6,7 @@ class User {
   final List<Activity> activity;
   final int conections;
   final int profile;
+  final String background;
   User(
       {this.photo,
       this.name,
@@ -13,6 +14,7 @@ class User {
       this.location,
       this.activity,
       this.conections,
+      this.background,
       this.profile});
 }
 

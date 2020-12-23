@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_design/linkedin/pages/profile/profile_page.dart';
 import 'package:flutter_design/linkedin/utils/data_mock.dart';
 import 'package:flutter_design/linkedin/utils/linkedin_colors.dart';
 import 'package:flutter_design/widgets/sliver_header_delegate.dart';
@@ -91,9 +92,13 @@ class PhotoUser extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 12),
       child: GestureDetector(
-        //onTap: () => _onTap(context),
+        onTap: () => _onTap(context),
         child: Image.asset(user.photo,height: 40)
       )
     );
+  }
+
+  _onTap(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) => ProfilePage()));
   }
 }
