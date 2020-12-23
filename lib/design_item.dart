@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design/anime/anime_page.dart';
+import 'package:flutter_design/exchange/exchange_page.dart';
 import 'package:flutter_design/linkedin/linkedin_page.dart';
 
 class DesignItem {
@@ -13,8 +14,12 @@ var optionsData = [
     option: 'Anime Design',
     destWidget: AnimePage()
   ),
-   DesignItem(
+  DesignItem(
     option: 'Linkedin Design',
     destWidget: LinkedInPage()
+  ),
+  DesignItem(
+    option: 'Exchange Design',
+    destWidget: ExchangePage()
   )
 ];
