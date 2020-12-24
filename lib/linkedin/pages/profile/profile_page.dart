@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_design/linkedin/models/user.dart';
 import 'package:flutter_design/linkedin/utils/data_mock.dart';
 import 'package:flutter_design/linkedin/utils/linkedin_colors.dart';
 
@@ -16,10 +17,89 @@ class ProfilePage extends StatelessWidget {
             ),
             Expanded(
               flex: 7, 
-              child: SizedBox()
+              child: _ProfileInformationList()
             )
           ]
         ),
+      )
+    );
+  }
+}
+
+class _ProfileInformationList extends StatelessWidget {
+  const _ProfileInformationList({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 24,vertical: 12),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: List.generate(
+            user.activity.length,
+            (index) {
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: _ListItemAbout(
+                 index: index,
+                 item: user.activity[index]
+                ),
+              );
+            }
+          )
+        )
+      ),
+    );
+  }
+}
+
+class _ListItemAbout extends StatelessWidget {
+  const _ListItemAbout({Key key,this.index,this.item}) : super(key: key);
+  final int index;
+  final Activity item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(8)
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal:12, vertical: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(item.name,style: Theme.of(context).textTheme.subtitle1.copyWith(
+                fontWeight: FontWeight.bold
+              )),
+            SizedBox(height: 12),
+            if(index == 0)
+              Text(item.description,style: Theme.of(context).textTheme.bodyText2)
+            else
+              Row(
+                children: [
+                  Image.asset(item.image,width: 60,fit: BoxFit.contain),
+                  SizedBox(width: 8),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(item.title,style: Theme.of(context).textTheme.subtitle1),
+                        SizedBox(height: 4),
+                        Text(item.description,style: Theme.of(context).textTheme.caption),
+                        SizedBox(height: 4),
+                        Text(item.date,style: Theme.of(context).textTheme.caption)
+                      ]
+                    )
+                  )
+                ]
+              )
+            
+            
+          ]
+        )
       )
     );
   }
