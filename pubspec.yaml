@@ -32,6 +32,7 @@ dependencies:
   flutter_svg: ^0.18.1
   intl: any
   golden_toolkit: ^0.8.0
+  confetti: ^0.5.4+1
 
 dev_dependencies:
   flutter_test:

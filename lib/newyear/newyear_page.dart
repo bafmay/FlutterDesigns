@@ -10,7 +10,7 @@ class NewYearPage extends StatelessWidget {
       title: 'Happy New Year!',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: NewYearCountdownScreen(
-        overrideStartDateTime: DateTime.parse('2021-01-01 00:00:29'),
+        overrideStartDateTime: DateTime.parse('2020-12-31 23:59:55'),
         doTick: true,
       ),
     );

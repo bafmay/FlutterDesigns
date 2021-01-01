@@ -18,6 +18,7 @@ class _HappyNewYearTextState extends State<HappyNewYearText>
   @override
   void initState() {
     super.initState();
+
     _showHappyNewYearController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1000),
@@ -34,6 +35,7 @@ class _HappyNewYearTextState extends State<HappyNewYearText>
   @override
   void didUpdateWidget(HappyNewYearText oldWidget) {
     super.didUpdateWidget(oldWidget);
+
     if (widget.secondsToNewYear != _previousSecondsToNewYear) {
       _previousSecondsToNewYear = widget.secondsToNewYear;
       if (_shouldDisplayHappyNewYears()) {
@@ -45,13 +47,17 @@ class _HappyNewYearTextState extends State<HappyNewYearText>
   @override
   void dispose() {
     _showHappyNewYearController.dispose();
+
     super.dispose();
   }
 
+  bool _shouldDisplayHappyNewYears() =>
+      widget.secondsToNewYear != null &&
+      widget.secondsToNewYear <= 0 &&
+      widget.secondsToNewYear > -35;
+
   @override
   Widget build(BuildContext context) {
-    if (!_shouldDisplayHappyNewYears()) return SizedBox();
-
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 500),
       child: _shouldDisplayHappyNewYears()
@@ -78,9 +84,4 @@ class _HappyNewYearTextState extends State<HappyNewYearText>
           : null,
     );
   }
-
-  bool _shouldDisplayHappyNewYears() =>
-      widget.secondsToNewYear != null &&
-      widget.secondsToNewYear <= 0 &&
-      widget.secondsToNewYear > -35;
 }
