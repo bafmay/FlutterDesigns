@@ -51,7 +51,7 @@ class _NewYearCountdownPageState extends State<NewYearCountdownPage>
 
   @override
   void dispose() {
-    _generateMoreFireworksTimer.cancel();
+    _generateMoreFireworksTimer?.cancel();
     _mountainFlashController.dispose();
     for (final controller in _fireworksControllers) {
       controller.dispose();

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_design/newyear/models/enviroment_mode.dart';
 import 'package:flutter_design/newyear/pages/landscape_page.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
-import 'test_tools.dart';
+
+import '../test_tools.dart';
 
 void main() {
   testGoldens('Landscape goldens', (tester) async {
