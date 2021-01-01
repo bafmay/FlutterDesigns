@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_design/anime/anime_page.dart';
 import 'package:flutter_design/exchange/exchange_page.dart';
 import 'package:flutter_design/linkedin/linkedin_page.dart';
+import 'package:flutter_design/newyear/newyear_page.dart';
 
 class DesignItem {
   final String option;
@@ -10,16 +11,8 @@ class DesignItem {
 }
 
 var optionsData = [
-  DesignItem(
-    option: 'Anime Design',
-    destWidget: AnimePage()
-  ),
-  DesignItem(
-    option: 'Linkedin Design',
-    destWidget: LinkedInPage()
-  ),
-  DesignItem(
-    option: 'Exchange Design',
-    destWidget: ExchangePage()
-  )
+  DesignItem(option: 'Anime Design', destWidget: AnimePage()),
+  DesignItem(option: 'Linkedin Design', destWidget: LinkedInPage()),
+  DesignItem(option: 'Exchange Design', destWidget: ExchangePage()),
+  DesignItem(option: 'New Year Design', destWidget: NewYearPage())
 ];
